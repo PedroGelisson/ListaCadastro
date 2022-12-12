@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100vw;
+    background-image: linear-gradient(to left , cyan, dodgerblue );
+}
+/* -----------LOGIN --------------*/
+#login{
+    text-align: center;
+    display: grid;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 25vh;
+}
+#login #cad{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+#login input{
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+#login h1{
+    font-weight: 700;
+    color: darkblue;
+    text-shadow: 2px 2px #fff;
+}
+#enviar{
+    background-color: darkblue;
+    color: #fff;
+}
+#enviar:hover{
+    background-color: cornflowerblue;
+}
+/*------------------------------------------------*/
+/*INDEX*/
+/*header---------------------------*/
+header{
+    width: 100vw;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    background-color: darkblue;
+}
+header #loga{
+    
+    display: grid;
+    /*justify-content: space-around;*/
+    margin-right: 1vw;
+}
+header #titulo{
+    width: 70vw;
+    margin-left: 5vw;
+    text-shadow: 2px 2px dodgerblue;
+}
+header #loga a{
+    color: red;
+    text-decoration: none;
+}
+header #loga a:hover{
+    color:#fff;
+}
+/*--------------------------------------------*/
+/*Menu -------------------------------*/
+nav{
+    display: flex;
+    
+}
+nav div{
+    width: 25vw;
+    text-align: center;
+    background-color: dodgerblue;
+}
+nav div a{
+    text-decoration: none;
+    color: #fff;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+nav div :hover{
+    background-color: darkblue;
+}
+/*----------------------------------------------*/
+/*Lista Pessoas ----------------------------*/
+#dadosLista{
+    padding: 15px;
+    color: #fff;
+}
+#dadosLista div{
+    padding: 10px;
+}
+#pessoas{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    background-color:rgba(120, 148, 219, 0.152);
+    padding: 15px;
+}
+/*-----------------------------------------------------*/
+/* RODAPE ----------------------------------*/
+footer{
+    width: 100vw;
+    background-color: darkblue;
+    display:flex;
+    justify-content: space-around;
+}
+
+footer #linkFooter{
+    display: grid;
+}
+footer #redes{
+    
+    display: grid;
+}
+footer #linkFooter a{
+    text-decoration: none;
+    color:#fff;
+}
+
+footer #redes a{
+    text-decoration: none;
+    color:#fff;
+}
+footer #linkFooter a:hover{
+    color:#000;
+}
+footer #redes a:hover{
+    color:#000;
+}
