@@ -43,28 +43,37 @@ include "./template/nav.php";
     
    
     <?php
-        if(isset($_POST['enviar'])){
-            $arquivo="./imagens/".$_FILES["foto"]["name"];
-            if(move_uploaded_file($_FILES["foto"]["tmp_name"], $arquivo)){
-                
-                require_once "dataBase.php";    
-                #executar consulta no BD
-                $sql="INSERT INTO lista (nome, email, foto)
-                VALUES 
-                ('{$_POST['nome']}','{$_POST['email']}','{$arquivo}')";
+        
+         if(isset($_POST['enviar'])){
+             $arquivo="./imagens/".$_FILES["foto"]["name"];
+             if(move_uploaded_file($_FILES["foto"]["tmp_name"], $arquivo)){
+                 
+                 require_once "dataBase.php";    
+                 #executar consulta no BD
+                 $sql="INSERT INTO lista (nome, email, foto)
+                 VALUES 
+                 ('{$_POST['nome']}','{$_POST['email']}','{$arquivo}')";
+ 
+                 //echo $sql;
+ 
+                 if(!$conexao->query($sql)){
+                     //var_dump($sql);
+                     echo "Falha ao salvar registro!";
+                 }
+ 
+             }
+         }
 
-                //echo $sql;
+            
 
-                if(!$conexao->query($sql)){
-                    //var_dump($sql);
-                    echo "Falha ao salvar registro!";
-                }
+        
+    ?>
 
-            }
-        }
-
-        include "listaPessoas.php";
-        include "./template/footer.php";
+        <?php
+    include "listaPessoas.php";
+  
+    
+    include "./template/footer.php";
     ?>
     
 </body>
